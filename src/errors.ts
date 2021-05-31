@@ -23,7 +23,7 @@ export class AbortionError extends Error {
 export class AbortedBySignalError extends AbortionError {
   public readonly name: string = 'AbortedBySignalError'
   public readonly source: string = 'Sync.EventBarrier'
-  public readonly event?: string
+  public readonly event?: string = undefined
   constructor(msg: string = 'Aborted by signal', event?: string) {
     super(msg, event)
     if (event) this.event = event
