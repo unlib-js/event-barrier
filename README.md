@@ -108,3 +108,17 @@ Hence the ordering of calls/events in the above example is:
 14. Third `eb.waitFor('foo')` pending
 
 To read event stream in a `async-await` fashion, use `eb.asIterator`, which has an internal queue, as shown in the [example](#example).
+
+## Polyfill for `events` Module
+
+`EventBarrier` inherits from `events.EventEmitter` class, which is a built-in class of Node.js. Therefore, if you want to use `EventBarrier` in the browser, you need to provide polyfill for `events` module. For `webpack` bundler, the polyfill is already included. For `rollup` bundler, please remember to install the `events` package:
+
+```bash
+npm install events --save
+```
+
+If you are using TypeScript, you may also install typings for the `events` package:
+
+```bash
+npm install @types/events --save-dev
+```
