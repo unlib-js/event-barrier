@@ -1,6 +1,6 @@
 {
   "name": "@unlib-js/event-barrier",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Event barrier that provides `notify` and `waitFor` primitives",
   "main": "build/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
   "author": "Untitled",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^15.6.0",
-    "typescript": "^4.2.4"
+    "@types/node": "^16.10.2",
+    "typescript": "^4.4.3"
   },
   "repository": {
     "url": "https://github.com/unlib-js/event-barrier.git"
