@@ -45,7 +45,10 @@ export abstract class BaseWaiter<T> {
     }
     if (abortSignalConf) {
       const { signal, err } = abortSignalConf
-      const onAbort = () => this.abort(err).dispose()
+      const onAbort = () => {
+        err.cause = signal.reason
+        this.abort(err).dispose()
+      }
       signal.addEventListener('abort', onAbort)
       this.abortInfo = { signal, onAbort }
     }
