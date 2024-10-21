@@ -1,6 +1,6 @@
 {
   "name": "@unlib-js/event-barrier",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Event barrier that provides `notify` and `waitFor` primitives",
   "main": "build/index.cjs",
   "module": "build/index.js",
